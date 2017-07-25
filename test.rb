@@ -9,10 +9,19 @@ p Puzzle.expand(345)
 
 p ['fid', 'lassssy', 'felix'].map{|s| Dog.new(s, s.size).to_s}
 
-c = Cartesian.new(Point.new(1,2), Point.new(3,5))
-p c.distance
-p c.line
+cx = Cartesian.new(Point.new(1,2), Point.new(3,5))
+p cx.distance
+p cx.line
 
-c = Cartesian.new(Point.new(1,-20), Point.new(3,5))
-p c.distance
-p c.line
+cx = Cartesian.new(Point.new(1,-20), Point.new(3,5))
+p cx.distance
+p cx.line
+
+p1 = Point.new(1,2)
+p2 = Point.new(3,9)
+p3 = Point.new(7,-8)
+p4 = Point.new(9,20)
+
+pts = [p1, p2, p3, p4]
+
+p (0...pts.size-1).map{|i| Cartesian.new(*pts[i,2]).distance}.sum
