@@ -1,4 +1,4 @@
-class Dog
+class Cat
     def initialize(name, age, sex)
         @name = name
         @age = age
